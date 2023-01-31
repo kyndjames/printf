@@ -35,8 +35,7 @@ int _printf(const char *format, ...)
 						_putchar(st[k]);
 					else if (st[k] != '%')
 					{
-						_putchar(st[k]);
-					}
+						_putchar(st[k]);					}
 				}
 			}
 			else if (format[i + 1] == '%')
@@ -44,6 +43,8 @@ int _printf(const char *format, ...)
 				i++;
 				_putchar('%');
 			}
-		}
+		}		
 	}
+	va_end(prtf);
+	return (0);
 }
